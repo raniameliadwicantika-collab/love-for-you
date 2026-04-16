@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Kamu ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.box {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ff4b5c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff1e3c;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2 id="text">Hai kamu 💕</h2>
+    <button onclick="next()">Klik ya...</button>
+
+    <a id="link" class="hidden" href="https://wa.me/" target="_blank">
+        Klik ini ya ❤️
+    </a>
+</div>
+
+<script>
+let messages = [
+    "Aku ada sesuatu buat kamu...",
+    "Gak panjang kok 😄",
+    "Cuma mau bilang...",
+    "Terima kasih ya sudah ada di hidup aku 💖",
+    "Kamu itu spesial banget buat aku 💕",
+    "Aku sayang kamu 😘"
+];
+
+let i = 0;
+
+function next() {
+    if (i < messages.length) {
+        document.getElementById("text").innerHTML = messages[i];
+        i++;
+    } else {
+        document.querySelector("button").style.display = "none";
+        document.getElementById("link").classList.remove("hidden");
+    }
+}
+</script>
+
+</body>
+</html>
